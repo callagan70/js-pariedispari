@@ -9,3 +9,53 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
+// Consigli del giorno
+// 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
+// 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
+// Buon lavoro e buon divertimento!
+
+var str = prompt("Sgancia un nome")
+var y = str.length; //per ciclo FOR
+var z = str.length; // per array dentro ciclo FOR
+var array = [str.split("")]; // Carico l'array
+var inizio = "";
+var fine = "";
+let prova = array[2];
+            console.log(array);
+            console.log(prova);
+
+if (y % 2 != 0) {
+    y = ((y - 1) / 2)
+}
+else {
+    y= y /2
+}
+
+        console.log(y)
+
+for ( i = 0; i  <= y; i++) {
+        z --;
+        debugger
+        inizio = array[i];
+        fine = array[z];
+
+        console.log ( inizio );
+        console.log ( fine );
+        
+    if (inizio != fine){
+
+        console.log(z)
+        document.getElementById("output").innerHTML = `La parola non è palindroma`;
+        break;
+    }
+
+    else {
+ 
+        document.getElementById("output").innerHTML = `La parola è palindroma`;
+        break;}
+        
+}
+
+// yuoiouy
+// tuttottut
+// cosasoc
