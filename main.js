@@ -14,28 +14,29 @@
 // 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 // Buon lavoro e buon divertimento!
 
+// SECTION Primo snecchino
+
 var str = prompt("Sgancia un nome")
-var y = str.length; //per ciclo FOR
-var z = str.length; // per array dentro ciclo FOR
-var array = [str.split("")]; // Carico l'array
+var y = str.length;                                                     // per ciclo FOR
+var z = str.length;                                                     // per array dentro ciclo FOR
+var array =Array.from(str);                                       // Carico l'array
 var inizio = "";
 var fine = "";
 let prova = array[2];
             console.log(array);
             console.log(prova);
 
-if (y % 2 != 0) {
+if (y % 2 != 0) {                                                           // Controllo se il numero è pari, altrimenti sottracco 1 e divido per 2
     y = ((y - 1) / 2)
 }
 else {
     y= y /2
 }
-
-        console.log(y)
+        console.log(y);
+        // document.getElementById("testo)").innerHTML = `La parola ${str}`;
 
 for ( i = 0; i  <= y; i++) {
         z --;
-        debugger
         inizio = array[i];
         fine = array[z];
 
@@ -53,9 +54,9 @@ for ( i = 0; i  <= y; i++) {
  
         document.getElementById("output").innerHTML = `La parola è palindroma`;
         break;}
-        
 }
 
 // yuoiouy
 // tuttottut
 // cosasoc
+// !SECTION 
