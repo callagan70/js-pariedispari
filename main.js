@@ -23,23 +23,17 @@ if (y % 2 != 0) {                                                           // C
 else {
     y= y /2
 }
-        console.log(y);
-            document.getElementById("testo").innerHTML = `La parola ${str}`;
 
 for ( i = 0; i  <= y; i++) {
         z --;
         inizio = array[i];
         fine = array[z];
-
     if (inizio != fine){
-
-        console.log(z)
-        document.getElementById("output").innerHTML = `La parola non è palindroma`;
+        document.getElementById("output").innerHTML = `La parola "${str}" non è palindroma`;
         break;
     }
-
     else {
-        document.getElementById("output").innerHTML = `La parola è palindroma`;
+        document.getElementById("output").innerHTML = `La parola "${str}" è palindroma`;
         break;}
 }
 
@@ -56,13 +50,30 @@ for ( i = 0; i  <= y; i++) {
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let pariDispari = prompt("Scegli pari (p) o dispari (d)");                                                                        // Pari o dispari
-let numeroInserito =  prompt("Scegli un numero");                                                                               // Variabile da 1 a cinque
-let pc = randomPc()
-let somma = numeroInserito + pc
+let pariDispari =  prompt("Scegli pari (p) o dispari (d)");                      // Pari o dispari
+let numeroInserito = parseInt (prompt("Scegli un numero"));                                          // Variabile da 1 a cinque
+let pc = randomPc()                                                                                         // Parte la funzione random
+let somma = parseInt (numeroInserito + pc)                                                                    // somma dei due numeri
+
 console.log( pariDispari, numeroInserito, pc, somma)
 
 function randomPc() {
     let x = Math.floor((Math.random () * 5));
     return x;
+}
+
+    document.getElementById("span1").innerHTML = `Hai scelto ${pariDispari}`;
+    document.getElementById("span2").innerHTML = `Hai scelto ${numeroInserito}`;
+    document.getElementById("span3").innerHTML = `Il computer ha rollato ${pc}`;
+    document.getElementById("span4").innerHTML = `La somma è ${somma}`;
+
+    if ((pariDispari == "p" && somma % 2 == 0) || (pariDispari == "d" && somma % 2 != 0)) {
+    document.getElementById("output2").innerHTML= "Hai vinto !!"
+}
+// else if  (pariDispari == "d" && somma % 2 != 0){
+//     document.getElementById("output2").innerHTML= "Hai vinto !!"
+// }
+
+else{
+    document.getElementById("output2").innerHTML= "Hai perso....."
 }
