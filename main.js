@@ -50,15 +50,13 @@ for ( i = 0; i  <= y; i++) {
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let pariDispari =  prompt("Scegli pari (p) o dispari (d)");                      // Pari o dispari
-let numeroInserito = parseInt (prompt("Scegli un numero"));                                          // Variabile da 1 a cinque
-let pc = randomPc()                                                                                         // Parte la funzione random
-let somma = parseInt (numeroInserito + pc)                                                                    // somma dei due numeri
-
-console.log( pariDispari, numeroInserito, pc, somma)
+let pariDispari =  prompt("Scegli pari (p) o dispari (d)");                         // Pari o dispari
+let numeroInserito = parseInt (prompt("Scegli un numero"));                 // Variabile da 1 a cinque
+let pc = randomPc()                                                                                // Parte la funzione random
+let somma = parseInt (numeroInserito + pc)                                          // somma dei due numeri
 
 function randomPc() {
-    let x = Math.floor((Math.random () * 5));
+    let x = Math.floor((Math.random () * 4 + 1));
     return x;
 }
 
@@ -70,10 +68,7 @@ function randomPc() {
     if ((pariDispari == "p" && somma % 2 == 0) || (pariDispari == "d" && somma % 2 != 0)) {
     document.getElementById("output2").innerHTML= "Hai vinto !!"
 }
-// else if  (pariDispari == "d" && somma % 2 != 0){
-//     document.getElementById("output2").innerHTML= "Hai vinto !!"
-// }
-
 else{
-    document.getElementById("output2").innerHTML= "Hai perso....."
-}
+    document.getElementById("output2").innerHTML= "Hai perso.....";}
+
+!SECTION
