@@ -11,3 +11,8 @@
 html {
  scroll-behavior: smooth;}
  /* Fine Utility */
+
+ body{
+    padding: 50px;
+
+ }
